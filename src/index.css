@@ -1,3 +1,63 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style-type: none;
+}
+
+
+/* BUTTON */
+.button {
+    border: 3px solid transparent;
+    border-radius: 3px;
+    position: relative;
+    overflow: hidden;
+    background-size: 400%;
+    cursor: pointer;
+  
+}
+
+
+.button:hover::before {
+    transform: scaleX(1);
+}
+
+.button-content {
+    position: relative;
+    z-index: 6;
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: scaleX(0);
+    transform-origin: 0 50%;
+    width: 100%;
+    height: inherit;
+    border-radius: inherit;
+    transition: all 0.475s;
+}
+
+
+/* .nav_button {
+    width: 7rem;
+    height: 2.6rem;
+    background: ;
+    color: white;
+}
+
+.nav_button:hover {
+    color: white;
+}
+
+.nav_button::before {
+    background: var(--mainBc);
+} */
